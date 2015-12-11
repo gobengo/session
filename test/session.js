@@ -296,7 +296,6 @@ describe('session()', function(){
       app.use(function (err, req, res, next) {
         if ( ! err) return next();
         res.status(500).send(err.message)
-        next(err)
       })
       var cookie;
 
